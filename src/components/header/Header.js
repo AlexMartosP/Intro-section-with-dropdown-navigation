@@ -9,7 +9,7 @@ import toggleIcon from '../../images/icon-menu.svg';
 import Navigation from './navigation/Navigation';
 
 const Header = () => {
-    const { width, height } = useWindowSize();
+    const { width } = useWindowSize();
     const [open, setOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -28,7 +28,7 @@ const Header = () => {
             <header className='padding-block-400'>
                 <div className="container-lg">
                     <div className='nav-wrapper'>
-                        <a href="#"><img src={logo} alt="" /></a>
+                        <a><img src={logo} alt="" /></a>
                         {width <= 800 && (
                             <button className="mobile-nav-toggle" onClick={toggleMenu}>
                                 <img src={toggleIcon} alt="" />
@@ -38,7 +38,7 @@ const Header = () => {
                             <>
                                 <Navigation />
                                 <div>
-                                    <a href='#'>Login</a>
+                                    <a>Login</a>
                                     <button className="button margin-left-500" datatype='secondary'>Register</button>
                                 </div>
                             </>

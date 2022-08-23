@@ -12,7 +12,7 @@ import meet from './images/client-meet.svg';
 import maker from './images/client-maker.svg';
 
 const App = () => {
-  const { width, height } = useWindowSize();
+  const { width } = useWindowSize();
 
   return (
     <>

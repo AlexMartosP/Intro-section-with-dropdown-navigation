@@ -21,7 +21,7 @@ const Navigation = () => {
         <nav className="padding-block-400">
             <ul className='navigation' role='list' aria-label='Primary'>
                 <li>
-                    <a className="dropdown-title" href="#" onClick={(event) => toggleDropdown(event)}>
+                    <a className="dropdown-title" onClick={(event) => toggleDropdown(event)}>
                         <span>Features</span>
                         <ArrowDown className="arrow-down" />
                         <ArrowUp className="arrow-up" />
@@ -36,7 +36,7 @@ const Navigation = () => {
                     </div>
                 </li>
                 <li>
-                    <a className="dropdown-title" href="#" onClick={(event) => toggleDropdown(event)}>
+                    <a className="dropdown-title" onClick={(event) => toggleDropdown(event)}>
                         <span>Company</span>
                         <ArrowDown className="arrow-down" />
                         <ArrowUp className="arrow-up" />
@@ -49,8 +49,8 @@ const Navigation = () => {
                         </ul>
                     </div>
                 </li>
-                <li><a href="#">Careers</a></li>
-                <li><a href="#">About</a></li>
+                <li><a>Careers</a></li>
+                <li><a>About</a></li>
             </ul>
         </nav>
     )

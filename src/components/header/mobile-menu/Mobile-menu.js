@@ -15,7 +15,7 @@ const MobileMenu = ({ toggleMenu }) => {
             <Navigation />
             <div className="text-align-center">
                 <div className="padding-block-400">
-                    <a href='#'>Login</a>
+                    <a>Login</a>
                 </div>
                 <button className="button fullwidth" datatype='secondary'>Register</button>
             </div>
