@@ -1,24 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+// Hooks
+import useWindowSize from "./hooks/useWindowSize";
+// Components
+import Header from './components/header/Header';
+// Images
+import heroImageDesktop from './images/image-hero-desktop.png';
+import heroImageMobile from './images/image-hero-mobile.png';
+import databiz from './images/client-databiz.svg';
+import audiophile from './images/client-audiophile.svg';
+import meet from './images/client-meet.svg';
+import maker from './images/client-maker.svg';
 
-function App() {
+const App = () => {
+  const { width, height } = useWindowSize();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <main>
+        <section className='hero-section'>
+          <div className="container-sm">
+            <div className="even-columns gap-lg align-end">
+              <div>
+                <h1 className="fs-primary-heading fw-bold">Make remote work</h1>
+                <p className='padding-block-500 text-secondary'> Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+                <button className='button'>Learn more</button>
+                <div className="clients align-center margin-top-lg">
+                  <img src={databiz} alt="" />
+                  <img src={audiophile} alt="" />
+                  <img src={meet} alt="" />
+                  <img src={maker} alt="" />
+                </div>
+              </div>
+              <img src={width >= 800 ? heroImageDesktop : heroImageMobile} alt="" />
+            </div>
+          </div>
+        </section>
+      </main>
+    </>
   );
 }
 
