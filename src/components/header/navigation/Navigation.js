@@ -19,15 +19,15 @@ const Navigation = () => {
 
     return (
         <nav className="padding-block-400">
-            <ul className='navigation' role='list' aria-label='Primary'>
+            <ul className='navigation' aria-label='Primary'>
                 <li>
-                    <a className="dropdown-title" onClick={(event) => toggleDropdown(event)}>
+                    <button className="dropdown-title" onClick={(event) => toggleDropdown(event)}>
                         <span>Features</span>
                         <ArrowDown className="arrow-down" />
                         <ArrowUp className="arrow-up" />
-                    </a>
+                    </button>
                     <div className="dropdown padding-400">
-                        <ul className="dropdown-menu" role='list'>
+                        <ul className="dropdown-menu">
                             <DropdownItem imgSrc={todoIcon} text="Todo List" />
                             <DropdownItem imgSrc={calendarIcon} text="Calendar" />
                             <DropdownItem imgSrc={remindersIcon} text="Reminders" />
@@ -36,21 +36,21 @@ const Navigation = () => {
                     </div>
                 </li>
                 <li>
-                    <a className="dropdown-title" onClick={(event) => toggleDropdown(event)}>
+                    <button className="dropdown-title" onClick={(event) => toggleDropdown(event)}>
                         <span>Company</span>
                         <ArrowDown className="arrow-down" />
                         <ArrowUp className="arrow-up" />
-                    </a>
+                    </button>
                     <div className="dropdown padding-400">
-                        <ul className="dropdown-menu" role='list'>
+                        <ul className="dropdown-menu">
                             <DropdownItem text="History" />
                             <DropdownItem text="Our team" />
                             <DropdownItem text="Blog" />
                         </ul>
                     </div>
                 </li>
-                <li><a>Careers</a></li>
-                <li><a>About</a></li>
+                <li><button>Careers</button></li>
+                <li><button>About</button></li>
             </ul>
         </nav>
     )

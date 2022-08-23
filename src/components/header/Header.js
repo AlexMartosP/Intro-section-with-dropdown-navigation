@@ -28,7 +28,7 @@ const Header = () => {
             <header className='padding-block-400'>
                 <div className="container-lg">
                     <div className='nav-wrapper'>
-                        <a><img src={logo} alt="" /></a>
+                        <button><img src={logo} alt="" /></button>
                         {width <= 800 && (
                             <button className="mobile-nav-toggle" onClick={toggleMenu}>
                                 <img src={toggleIcon} alt="" />
@@ -38,7 +38,7 @@ const Header = () => {
                             <>
                                 <Navigation />
                                 <div>
-                                    <a>Login</a>
+                                    <button>Login</button>
                                     <button className="button margin-left-500" datatype='secondary'>Register</button>
                                 </div>
                             </>

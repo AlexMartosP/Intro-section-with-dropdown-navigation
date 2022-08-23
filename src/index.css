@@ -225,12 +225,14 @@ body[data-menu-open='true'] {
   touch-action: none;
 }
 
-a {
-  text-decoration: none;
+button {
+  background-color: transparent;
+  border: none;
   color: var(--clr-secondary);
+  cursor: pointer;
 }
-a:hover,
-a:focus-visible {
+button:hover,
+button:focus-visible {
   color: var(--clr-primary);
 }
 
